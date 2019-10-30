@@ -98,7 +98,7 @@ int main()
 	h.pop();
 	Assert(h.size() == 0, "StringStack c has 0 elements");
 	
-//	Assert(c != h, "StringStack c == StringStack h");
+	Assert(c == h, "StringStack c == StringStack h");
 	
 	//IntList
 	IntList ia{};
@@ -119,7 +119,7 @@ int main()
 	IntList g;
 	g = ia;
 
-//	Assert(g == ia, "IntList g == IntList ia");	
+	Assert(g == ia, "IntList g == IntList ia");	
 
 	Assert(g.empty() == false, "IntList g is NOT empty");
 	Assert(g.size() == 4, "IntList g has 4 elements");
@@ -130,7 +130,7 @@ int main()
 	Assert(g.empty() == true, "IntList g is empty");
 	Assert(g.size() == 0, "IntList g has 0 elements");
 
-//	Assert(g != ia, "IntList g == IntList ia");	
+	Assert(g != ia, "IntList g == IntList ia");	
 	
 	//IntStack
 	IntStack ib{};
@@ -148,7 +148,7 @@ int main()
 	id.push(37);	
 
 	Assert(ib == ic, "IntStack ib == IntStack ic");
-//	Assert(id != ic, "id != ic");
+	Assert(id != ic, "id != ic");
 	
 	Assert(ic.empty() == false, "ic is NOT empty");
 	Assert(ic.size() == 2, "ic has 2 elements");
@@ -199,8 +199,8 @@ int main()
 	Assert(l.size() == 0, "DoubleQueue l has NO elements");
 	l = k;
 	
-//	Assert(k == j, "DoubleQueue k == DoubleQueue j");	
-//	Assert(l == j, "DoubleQueue l == DoubleQueue j");		
+	Assert(k == j, "DoubleQueue k == DoubleQueue j");	
+	Assert(l == j, "DoubleQueue l == DoubleQueue j");		
 
 	//CharQueue	
 	CharQueue m{'E', 'A', 'R', 'T', 'H', 'Q', 'U', 'A', 'K', 'E'};
@@ -231,8 +231,8 @@ int main()
 	CharQueue o{};
 	o = n;	
 
-//	Assert(o == n, "CharQueue o == CharQueue n");
-//	Assert(m != n, "CharQueue m != CharQueue n");
+	Assert(o == n, "CharQueue o == CharQueue n");
+	Assert(m != n, "CharQueue m != CharQueue n");
 	
 	Assert(o.size() == 12, "CharQueue o has 12 elements");
 	o.pop();

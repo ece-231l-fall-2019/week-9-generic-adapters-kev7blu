@@ -199,13 +199,13 @@ class List
 	}
 	
 
-	template <typename V> friend bool operator ==(const List<V>& a, const List<V> b);
-	template <typename V> friend bool operator !=(const List<V>& a, const List<V> b);
+	template <typename V> friend bool operator ==(const List<V>& a, const List<V>& b);
+	template <typename V> friend bool operator !=(const List<V>& a, const List<V>& b);
 };
 
 
 template <typename T>
-bool operator ==(const List<T>& a, const List<T> b)
+bool operator ==(const List<T>& a, const List<T>& b)
 {
 	if (a.size() != b.size())
 		return false;
@@ -222,7 +222,7 @@ bool operator ==(const List<T>& a, const List<T> b)
 }
 
 template <typename T>
-bool operator !=(const List<T>& a, const List<T> b)
+bool operator !=(const List<T>& a, const List<T>& b)
 {
 	if (a.size() != b.size())
 		return true;
